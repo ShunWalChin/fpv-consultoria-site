@@ -1,20 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 200" role="img" aria-label="Imunitá - Clínica de Imunização">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 185" role="img" aria-label="Imunitá - Clínica de Imunização">
   <title>Imunitá</title>
-  <!-- Symbol: open square + medical cross + I -->
-  <g stroke="#4A2E20" stroke-width="9" fill="none">
-    <path d="M14 14 V186 H110"/>
-    <path d="M14 14 H70"/>
+  <desc>Logotipo da Imunitá Clínica de Imunização, com símbolo médico e assinatura tipográfica.</desc>
+
+  <g fill="none" stroke="#3A2418" stroke-width="8" stroke-linecap="square" stroke-linejoin="miter">
+    <path d="M8 30V176H132"/>
+    <path d="M8 30H96"/>
   </g>
-  <!-- Brown vertical bar (I) -->
-  <rect x="50" y="46" width="22" height="118" fill="#7B4A2D"/>
-  <!-- Medical cross (gold/brown) -->
-  <rect x="78"  y="14" width="20" height="56" fill="#B8884A"/>
-  <rect x="62"  y="30" width="52" height="22" fill="#B8884A"/>
-  <!-- Wordmark -->
-  <text x="140" y="108" fill="#3A2418" font-family="Inter, Arial, sans-serif"
-        font-size="78" font-weight="900" letter-spacing="2">IMUNITÁ</text>
-  <line x1="140" y1="128" x2="446" y2="128" stroke="#7B4A2D" stroke-width="3"/>
-  <text x="140" y="170" fill="#3A2418" font-family="Inter, Arial, sans-serif"
-        font-size="26" font-weight="400">Clínica de Imunização</text>
+
+  <rect x="56" y="62" width="22" height="88" fill="#7B4A2D"/>
+
+  <g fill="#C9953C">
+    <rect x="122" y="0" width="20" height="75"/>
+    <rect x="94" y="28" width="76" height="20"/>
+  </g>
+
+  <g fill="#3A2418" font-family="Inter, Arial, Helvetica, sans-serif">
+    <text x="202" y="84" font-size="58" font-weight="900" letter-spacing="4" textLength="330" lengthAdjust="spacingAndGlyphs">IMUNITÁ</text>
+    <line x1="202" y1="108" x2="540" y2="108" stroke="#7B4A2D" stroke-width="3"/>
+    <text x="202" y="146" font-size="27" font-weight="400" textLength="332" lengthAdjust="spacingAndGlyphs">Clínica de Imunização</text>
+  </g>
 </svg>

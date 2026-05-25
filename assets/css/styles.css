@@ -966,6 +966,9 @@ main, header, footer { position: relative; z-index: 1; }
   background: linear-gradient(160deg, rgba(221,170,51,0.10), rgba(255,255,255,0.02));
   box-shadow: 0 28px 56px rgba(0,0,0,0.5), 0 0 56px var(--gold-glow);
 }
+.testimonial-card.wide {
+  border-color: rgba(221, 170, 51, 0.34);
+}
 .quote-icon {
   position: absolute;
   top: 28px; right: 28px;
@@ -1264,6 +1267,7 @@ main, header, footer { position: relative; z-index: 1; }
   .mobile-nav { padding-top: 42px; }
   .services-grid, .benefits-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .testimonials-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .testimonial-card.wide { grid-column: span 2; }
   .footer-grid { grid-template-columns: 1.3fr 0.8fr 1.2fr; }
   .processos-benefits-grid { grid-template-columns: repeat(6, minmax(0, 1fr)); }
 }
@@ -1279,7 +1283,9 @@ main, header, footer { position: relative; z-index: 1; }
   .benefits-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 22px; }
   .clients-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
   .testimonials-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-  .testimonials-grid.has-featured { grid-template-columns: 1.45fr 1fr 1fr; }
+  .testimonials-grid.has-featured { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .testimonial-card.featured { grid-column: span 2; }
+  .testimonial-card.wide { grid-column: span 2; }
   .footer-grid { grid-template-columns: 2fr 1fr 1.5fr; gap: 60px; }
   .processos-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
 }
@@ -1291,6 +1297,7 @@ main, header, footer { position: relative; z-index: 1; }
   .btn { width: 100%; padding-inline: 20px; }
   .hero { padding-bottom: 64px; }
   .service-card, .testimonial-card, .premium-card, .processo-card { padding: 24px; }
+  .testimonial-card p { font-size: 0.98rem; line-height: 1.72; }
   .floating-whatsapp { right: 18px; bottom: 18px; width: 56px; height: 56px; }
 }
 @media (prefers-reduced-motion: reduce) {
