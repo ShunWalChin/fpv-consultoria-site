@@ -1,0 +1,120 @@
+# =====================================================================
+# FPV Consultoria Empresarial — Apache .htaccess (servidor militarizado)
+# Performance + Segurança + SEO
+# =====================================================================
+
+# ----------------------- 1. ENGINE ON --------------------------------
+RewriteEngine On
+Options -Indexes -MultiViews
+ServerSignature Off
+
+# ----------------------- 2. FORCE HTTPS ------------------------------
+RewriteCond %{HTTPS} !=on
+RewriteCond %{HTTP:X-Forwarded-Proto} !=https
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+# ----------------------- 3. WWW (canonical) --------------------------
+# Mantém www como host canônico — comentar caso prefira apex
+RewriteCond %{HTTP_HOST} ^fpvconsultoria\.com\.br$ [NC]
+RewriteRule ^(.*)$ https://www.fpvconsultoria.com.br/$1 [R=301,L]
+
+# ----------------------- 4. REMOVE TRAILING SLASH --------------------
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.+)/$ /$1 [R=301,L]
+
+# ----------------------- 5. FRIENDLY ERRORS --------------------------
+ErrorDocument 404 /index.html
+
+# ----------------------- 6. COMPRESSION (Gzip / Deflate) -------------
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css text/javascript
+  AddOutputFilterByType DEFLATE application/javascript application/x-javascript
+  AddOutputFilterByType DEFLATE application/json application/xml application/rss+xml
+  AddOutputFilterByType DEFLATE image/svg+xml font/woff font/woff2
+</IfModule>
+
+# ----------------------- 7. BROTLI (when available) ------------------
+<IfModule mod_brotli.c>
+  AddOutputFilterByType BROTLI_COMPRESS text/html text/css text/javascript
+  AddOutputFilterByType BROTLI_COMPRESS application/javascript application/json image/svg+xml
+</IfModule>
+
+# ----------------------- 8. CACHING (Expires) ------------------------
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresDefault                              "access plus 1 month"
+
+  ExpiresByType text/html                     "access plus 0 seconds"
+  ExpiresByType text/xml                      "access plus 0 seconds"
+  ExpiresByType application/xml               "access plus 0 seconds"
+
+  ExpiresByType text/css                      "access plus 1 year"
+  ExpiresByType application/javascript        "access plus 1 year"
+  ExpiresByType text/javascript               "access plus 1 year"
+
+  ExpiresByType image/jpeg                    "access plus 6 months"
+  ExpiresByType image/png                     "access plus 6 months"
+  ExpiresByType image/webp                    "access plus 6 months"
+  ExpiresByType image/svg+xml                 "access plus 1 year"
+  ExpiresByType image/x-icon                  "access plus 1 year"
+
+  ExpiresByType font/woff                     "access plus 1 year"
+  ExpiresByType font/woff2                    "access plus 1 year"
+</IfModule>
+
+# ----------------------- 9. CACHE-CONTROL ----------------------------
+<IfModule mod_headers.c>
+  <FilesMatch "\.(css|js|woff2?|svg|jpg|jpeg|png|webp|ico)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+  <FilesMatch "\.(html|xml|json)$">
+    Header set Cache-Control "no-cache, must-revalidate"
+  </FilesMatch>
+
+  # ----------------------- 10. SECURITY HEADERS ----------------------
+  Header always set X-Content-Type-Options       "nosniff"
+  Header always set X-Frame-Options              "SAMEORIGIN"
+  Header always set X-XSS-Protection             "1; mode=block"
+  Header always set Referrer-Policy              "strict-origin-when-cross-origin"
+  Header always set Permissions-Policy           "geolocation=(), microphone=(), camera=(), interest-cohort=()"
+  Header always set Strict-Transport-Security    "max-age=63072000; includeSubDomains; preload"
+
+  # Content-Security-Policy (ajuste hosts adicionais conforme necessário)
+  Header always set Content-Security-Policy "default-src 'self'; \
+img-src 'self' data: https://images.unsplash.com https://www.fpvconsultoria.com.br; \
+style-src 'self' https://fonts.googleapis.com; \
+font-src 'self' https://fonts.gstatic.com data:; \
+script-src 'self' 'sha256-yk3fG6Is4q4XS/I+TY0x7gk0uv16oOi7uN/IdI7XzZw='; \
+connect-src 'self' https://wa.me; \
+frame-ancestors 'self'; \
+base-uri 'self'; \
+form-action 'self' https://wa.me"
+
+  # Remove Server header (defense in depth)
+  Header unset Server
+  Header unset X-Powered-By
+</IfModule>
+
+# ----------------------- 11. MIME TYPES ------------------------------
+<IfModule mod_mime.c>
+  AddType image/svg+xml                 svg svgz
+  AddType font/woff                     woff
+  AddType font/woff2                    woff2
+  AddType application/manifest+json     webmanifest
+</IfModule>
+
+# ----------------------- 12. UTF-8 -----------------------------------
+AddDefaultCharset UTF-8
+
+# ----------------------- 13. BLOCK BAD BOTS --------------------------
+<IfModule mod_rewrite.c>
+  RewriteCond %{HTTP_USER_AGENT} (ahrefsbot|mj12bot|semrushbot|dotbot) [NC]
+  RewriteRule .* - [F,L]
+</IfModule>
+
+# ----------------------- 14. PROTECT SENSITIVE FILES -----------------
+RewriteRule (^|/)(\.git|\.claude|node_modules|vendor)(/|$) - [F,L]
+
+<FilesMatch "(^\.|^index\.legacy\.html$|\.zip$|^README\.md$|^package(-lock)?\.json$|^pnpm-lock\.yaml$|^yarn\.lock$)">
+  Require all denied
+</FilesMatch>

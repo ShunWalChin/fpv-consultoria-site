@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 200" role="img" aria-label="Atelier Gourmand - Escola de Cozinha">
+  <title>Atelier Gourmand</title>
+  <!-- Four geometric brand blocks -->
+  <rect x="8"   y="6"  width="76" height="76" fill="#C0382B"/>
+  <circle cx="130" cy="44" r="38" fill="#E8B335"/>
+  <circle cx="216" cy="44" r="38" fill="#7FC4D6"/>
+  <rect x="254" y="6"  width="76" height="76" fill="#3F8A66"/>
+  <!-- Wordmark -->
+  <text x="8" y="138" fill="#0E0E0E" font-family="Inter, Arial, sans-serif"
+        font-size="40" font-weight="800" letter-spacing="-0.5">Atelier Gourmand</text>
+  <text x="8" y="178" fill="#0E0E0E" font-family="Georgia, serif"
+        font-size="30" font-style="italic">Escola de Cozinha</text>
+</svg>

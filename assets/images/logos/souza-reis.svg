@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 360" role="img" aria-label="Souza & Reis - Assessoria Contábil e Empresarial">
+  <title>Souza &amp; Reis</title>
+  <!-- Navy square -->
+  <rect x="0" y="0" width="280" height="360" rx="6" fill="#0B1B3A"/>
+  <!-- Monogram S&R -->
+  <text x="50%" y="40%" text-anchor="middle" fill="#FFFFFF"
+        font-family="Georgia, 'Playfair Display', serif"
+        font-size="120" font-weight="700" font-style="italic">S<tspan font-size="92">&amp;</tspan>R</text>
+  <!-- Divider line -->
+  <line x1="60" y1="200" x2="220" y2="200" stroke="#FFFFFF" stroke-width="1.2"/>
+  <!-- Brand text -->
+  <text x="50%" y="244" text-anchor="middle" fill="#FFFFFF"
+        font-family="Inter, Arial, sans-serif" font-size="26" font-weight="800" letter-spacing="2">SOUZA &amp; REIS</text>
+  <text x="50%" y="280" text-anchor="middle" fill="#C9CDDA"
+        font-family="Inter, Arial, sans-serif" font-size="14" font-weight="500" letter-spacing="2">ASSESSORIA CONTÁBIL</text>
+  <text x="50%" y="304" text-anchor="middle" fill="#C9CDDA"
+        font-family="Inter, Arial, sans-serif" font-size="14" font-weight="500" letter-spacing="2">E EMPRESARIAL</text>
+</svg>

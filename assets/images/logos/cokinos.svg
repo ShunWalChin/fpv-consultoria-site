@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 200" role="img" aria-label="Cokinos Auditores e Consultores - A member of MGI Worldwide">
+  <title>Cokinos Auditores e Consultores</title>
+  <text x="10" y="60" fill="#0E2F6B" font-family="Inter, Arial, sans-serif"
+        font-size="34" font-weight="800">Cokinos Auditores e Consultores</text>
+  <text x="10" y="90" fill="#0E2F6B" font-family="Inter, Arial, sans-serif"
+        font-size="14" font-weight="400">A member of</text>
+  <!-- MGI wordmark stylized -->
+  <text x="10" y="142" fill="#0E2F6B" font-family="Inter, Arial, sans-serif"
+        font-size="42" font-weight="800" letter-spacing="-1">mgi</text>
+  <text x="92" y="142" fill="#1DB6C9" font-family="Inter, Arial, sans-serif"
+        font-size="42" font-weight="400" letter-spacing="-0.5">worldwide</text>
+  <!-- Decorative dot trail -->
+  <g fill="#1DB6C9">
+    <circle cx="312" cy="118" r="3.2"/>
+    <circle cx="328" cy="124" r="3.2"/>
+    <circle cx="344" cy="132" r="3.2"/>
+    <circle cx="358" cy="142" r="3.2"/>
+  </g>
+  <path d="M364 144 q12 -10 22 -2" stroke="#1DB6C9" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+</svg>

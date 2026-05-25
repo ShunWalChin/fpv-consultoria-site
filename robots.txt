@@ -1,0 +1,12 @@
+# FPV Consultoria Empresarial — robots.txt
+# Permite indexação completa do site institucional
+
+User-agent: *
+Allow: /
+Disallow: /.htaccess
+Disallow: /.git/
+Disallow: /index.legacy.html
+Disallow: /assets/cache/
+
+# Sitemap
+Sitemap: https://www.fpvconsultoria.com.br/sitemap.xml

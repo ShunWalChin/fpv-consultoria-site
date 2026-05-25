@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 240" role="img" aria-label="DGL Engenharia">
+  <title>DGL Engenharia</title>
+
+  <!-- Stylized D made of layered curves: light teal, mid teal, dark navy -->
+  <g transform="translate(28,28)">
+    <!-- Light teal back layer -->
+    <path d="M10 80 Q 60 -10 150 5 Q 100 60 80 100 Q 60 140 100 180 Q 50 175 20 150 Q -10 120 10 80 Z"
+          fill="#B3D2D8"/>
+    <!-- Middle teal -->
+    <path d="M40 90 Q 80 10 165 25 Q 120 70 100 110 Q 80 150 120 185 Q 75 180 50 160 Q 25 130 40 90 Z"
+          fill="#6FA8B3"/>
+    <!-- Dark D shape -->
+    <path d="M70 30 L70 175 Q 130 175 150 105 Q 140 50 70 30 Z" fill="#1E1E1E"/>
+    <!-- White cutout (inner space of D) -->
+    <path d="M92 60 L92 150 Q 122 142 130 105 Q 122 72 92 60 Z" fill="#FFFFFF"/>
+  </g>
+
+  <!-- Wordmark -->
+  <text x="240" y="130" fill="#1E1E1E" font-family="Inter, Arial, sans-serif"
+        font-size="100" font-weight="900" letter-spacing="-2">DGL</text>
+  <text x="240" y="188" fill="#8C8C8C" font-family="Inter, Arial, sans-serif"
+        font-size="42" font-weight="400" letter-spacing="2">engenharia</text>
+</svg>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 480" role="img" aria-label="Biscuit - Ateliê de biscoitos artísticos">
+  <title>Biscuit Ateliê</title>
+  <!-- Soft pink background -->
+  <rect x="0" y="0" width="520" height="480" rx="10" fill="#F6DCE0"/>
+
+  <!-- Pastry bag (piping bag) -->
+  <g transform="translate(330,90) rotate(28)">
+    <polygon points="0,0 90,0 56,140 32,140" fill="#F0B7C3" stroke="#D27F95" stroke-width="2"/>
+    <!-- knot top -->
+    <ellipse cx="45" cy="-8" rx="40" ry="12" fill="#F0B7C3" stroke="#D27F95" stroke-width="2"/>
+    <path d="M20 -10 Q 0 -30 20 -40" stroke="#D27F95" stroke-width="3" fill="none"/>
+    <path d="M70 -10 Q 90 -30 70 -40" stroke="#D27F95" stroke-width="3" fill="none"/>
+    <!-- tip -->
+    <polygon points="32,140 56,140 50,160 38,160" fill="#9E5A6E"/>
+    <!-- icing drop -->
+    <path d="M44 162 Q 38 178 44 184 Q 50 178 44 162" fill="#D74C70"/>
+  </g>
+
+  <!-- Decorative icing swirl -->
+  <path d="M120 240 q 30 -30 60 -10 q 20 14 0 32 q -22 18 -52 0 q -30 -20 30 -36 q 60 -16 90 6"
+        fill="none" stroke="#D74C70" stroke-width="3.4" stroke-linecap="round"/>
+  <!-- Decorative leaves -->
+  <g fill="#9E5A6E">
+    <path d="M120 260 q -16 -6 -22 6 q 18 4 22 -6"/>
+    <path d="M130 274 q -10 10 -2 22 q 14 -10 2 -22"/>
+  </g>
+
+  <!-- Wordmark "Biscuit" in green script -->
+  <text x="80" y="370" fill="#7BA77E" font-family="'Brush Script MT','Lucida Handwriting',cursive"
+        font-size="180" font-weight="600" font-style="italic">Biscuit</text>
+  <!-- Heart on "i" dot -->
+  <g transform="translate(252,278)">
+    <circle cx="0" cy="0" r="16" fill="#A85B3F"/>
+    <path d="M0 8 C -10 0 -10 -8 -4 -8 C -1 -8 0 -5 0 -5 C 0 -5 1 -8 4 -8 C 10 -8 10 0 0 8 Z" fill="#E94B73"/>
+  </g>
+
+  <!-- Subtitle -->
+  <text x="50%" y="430" text-anchor="middle" fill="#2A2A2A"
+        font-family="'Brush Script MT', Georgia, serif" font-size="38" font-weight="600">
+    Ateliê de biscoitos artísticos
+  </text>
+</svg>
