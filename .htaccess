@@ -87,7 +87,7 @@ Header always set Content-Security-Policy "default-src 'self'; \
 img-src 'self' data: https://images.unsplash.com https://www.fpvconsultoria.com.br; \
 style-src 'self' https://fonts.googleapis.com; \
 font-src 'self' https://fonts.gstatic.com data:; \
-script-src 'self' 'sha256-/zQTk67jQjvajhip2Rb14cVD6CiSNT6YMKr88T5FLIg=' 'sha256-kSD7Z0UEPmGRQaGtbp2K5sfxanPqqYY7AuoLOLbR5Ms='; \
+script-src 'self' 'sha256-DY6n6NqV9Jhdqpk58CR0e2pMBETySYFlsDphWbWO2zM=' 'sha256-wcZe0HvDCx49w/E1787pAtFr1/YCUVxxnnO60GZ/7Qo='; \
 script-src-attr 'none'; \
 connect-src 'self'; \
 object-src 'none'; \

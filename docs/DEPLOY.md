@@ -38,7 +38,7 @@ http://127.0.0.1:4173/
 O deploy final deve ser gerado a partir de `public_html/`, pois essa pasta espelha a raiz publica do servidor.
 
 ```powershell
-Compress-Archive -Path 'public_html\*' -DestinationPath 'fpv_deploy_20260610_final.zip' -Force
+Compress-Archive -Path 'public_html\*' -DestinationPath 'fpv_deploy_20260611_sem_endereco.zip' -Force
 ```
 
 O ZIP deve conter:

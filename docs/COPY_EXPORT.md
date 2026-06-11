@@ -6,11 +6,11 @@ Atualizado em 2026-06-10.
 ## SEO e Metadados
 
 - Title: FPV Consultoria Empresarial | BPO Financeiro em Americana-SP
-- Description: BPO Financeiro e consultoria empresarial em Americana/SP. Contas a pagar, fluxo de caixa, DRE gerencial e indicadores estratégicos com a FPV.
+- Description: BPO Financeiro e consultoria empresarial para empresas que precisam organizar contas a pagar, fluxo de caixa, DRE gerencial e indicadores estratégicos com a FPV.
 - Keywords: BPO Financeiro, consultoria empresarial, contas a pagar, contas a receber, fluxo de caixa, DRE gerencial, conciliação bancária, gestão de indicadores, FPV, Americana SP
 - Canonical: https://www.fpvconsultoria.com.br/
 - OG Title: FPV Consultoria Empresarial | BPO Financeiro
-- OG Description: Seu financeiro organizado para você tomar decisões com mais segurança. BPO Financeiro especializado para empresas em Americana/SP e região.
+- OG Description: Seu financeiro organizado para você tomar decisões com mais segurança. BPO Financeiro especializado para empresas que buscam controle, eficiência e crescimento.
 
 ## Header
 
@@ -209,7 +209,6 @@ Autor:
 - Envie seus dados ou fale diretamente com a consultoria para iniciar a organização financeira da sua empresa.
 - (11) 99736-1011
 - contato@fpvconsultoria.com.br
-- Rua São Gabriel, 1999 — Americana/SP
 - Pré-orçamento
 - Receba um contato da FPV
 - Nome completo
@@ -254,7 +253,7 @@ CNPJ: {cnpj ou "Não informado"}
 - Política de Privacidade
 - A FPV Consultoria Empresarial respeita a privacidade dos visitantes, clientes e parceiros.
 - Fundador e CEO: Francisco Valente.
-- Responsável pelo site: FPV Consultoria Empresarial, CNPJ 32.541.335.0001/03, Rua São Gabriel, 1999, Americana/SP.
+- Responsável pelo site: FPV Consultoria Empresarial, CNPJ 32.541.335.0001/03.
 - Dados que podemos coletar.
 - Finalidades do tratamento.
 - Bases legais.

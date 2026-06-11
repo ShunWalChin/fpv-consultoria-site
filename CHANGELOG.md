@@ -2,6 +2,15 @@
 
 Todas as mudancas relevantes deste projeto ficam registradas aqui.
 
+## 2026-06-11
+
+- Removido o endereco fisico do site.
+- Removidas referencias de localidade dos metadados de SEO para evitar exibicao indireta do endereco.
+- Removido o objeto `address` dos dados estruturados JSON-LD da home e da Politica de Privacidade.
+- Atualizado o texto de responsabilidade da Politica de Privacidade para manter apenas empresa e CNPJ.
+- Atualizado o export de copys para refletir a versao sem endereco fisico.
+- Regerado o pacote de deploy para hospedagem como `fpv_deploy_20260611_sem_endereco.zip`.
+
 ## 2026-06-10
 
 - Padronizado o nome do fundador e CEO em todo o site como Francisco Valente.

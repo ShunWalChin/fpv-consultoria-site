@@ -126,7 +126,7 @@ Para conferencia visual mobile/desktop, use o localhost e teste principalmente:
 
 ## Deploy
 
-O pacote local de deploy e gerado como `fpv_deploy_20260610_final.zip`, contendo o conteudo de `public_html/` pronto para hospedagem:
+O pacote local de deploy mais recente e gerado como `fpv_deploy_20260611_sem_endereco.zip`, contendo o conteudo de `public_html/` pronto para hospedagem:
 
 - `index.html`
 - `politica-privacidade.html`
