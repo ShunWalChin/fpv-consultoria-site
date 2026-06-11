@@ -13,11 +13,12 @@ Este documento descreve como preparar e publicar o site da FPV Consultoria Empre
 Na raiz do projeto, rode:
 
 ```powershell
-npx --yes html-validate index.html
+npx --yes html-validate index.html politica-privacidade.html public_html\index.html public_html\politica-privacidade.html
 node --check assets/js/main.js
 node --check assets/js/animations.js
 node --check assets/js/main.min.js
 node --check assets/js/animations.min.js
+npx --yes @axe-core/cli http://127.0.0.1:4173/ http://127.0.0.1:4173/politica-privacidade.html --exit
 ```
 
 Confira localmente:
@@ -34,13 +35,16 @@ http://127.0.0.1:4173/
 
 ## Gerar ZIP de Deploy
 
+O deploy final deve ser gerado a partir de `public_html/`, pois essa pasta espelha a raiz publica do servidor.
+
 ```powershell
-Compress-Archive -LiteralPath @('index.html','.htaccess','robots.txt','sitemap.xml','assets') -DestinationPath 'fpv_deploy.zip' -Force
+Compress-Archive -Path 'public_html\*' -DestinationPath 'fpv_deploy_20260610_final.zip' -Force
 ```
 
 O ZIP deve conter:
 
 - `index.html`
+- `politica-privacidade.html`
 - `.htaccess`
 - `robots.txt`
 - `sitemap.xml`
@@ -68,12 +72,18 @@ O ZIP nao deve conter:
 ## Checklist Pos-deploy
 
 - Site abre sem erro HTTP.
+- `politica-privacidade.html` abre sem erro HTTP.
 - Imagem do fundador aparece na secao `#fundador`.
 - Logos de clientes aparecem com contraste correto.
+- Logo da Cokinos aparece sem corte.
 - Depoimentos genericos removidos nao aparecem mais.
+- Prova Social mostra DGL Sistemas, Cokinos Auditores e Imunita em cards simetricos no desktop.
+- CNPJ `32.541.335.0001/03` aparece no rodape e na politica.
+- Assinatura `desenvolvido com tecnologia fattech.com.br` aparece no rodape com miniatura da FAT Tech.
 - Menu mobile abre e fecha corretamente.
 - FAQ abre apenas uma pergunta por vez.
 - Botao flutuante de WhatsApp funciona.
+- Auditoria automatizada axe-core passa com 0 violacoes criticas conhecidas.
 - `https://www.fpvconsultoria.com.br/sitemap.xml` esta acessivel.
 - `https://www.fpvconsultoria.com.br/robots.txt` esta acessivel.
 
@@ -83,7 +93,7 @@ Fluxo recomendado:
 
 ```powershell
 git status
-git add index.html assets README.md CHANGELOG.md docs sitemap.xml
-git commit -m "Update founder section and documentation"
+git add .htaccess CHANGELOG.md README.md docs index.html politica-privacidade.html sitemap.xml robots.txt assets public_html
+git commit -m "Finalize FPV site audit and deploy package"
 git push origin main
 ```

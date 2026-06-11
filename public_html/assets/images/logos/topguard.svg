@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 360" role="img" aria-label="TopGuard Corretora de Seguros - Renovações">
+  <title>TopGuard Corretora de Seguros</title>
+  <!-- Roofs: grey wings + central red house -->
+  <g>
+    <polygon points="20,150 80,90 130,90 70,150" fill="#C8C8C8"/>
+    <polygon points="80,150 140,90 180,90 120,150" fill="#9A9A9A"/>
+    <polygon points="240,150 180,90 220,90 280,150" fill="#9A9A9A"/>
+    <polygon points="290,150 230,90 290,90 340,150" fill="#C8C8C8"/>
+    <!-- Central red house -->
+    <polygon points="180,60 120,150 240,150" fill="#D62327"/>
+    <rect x="160" y="120" width="40" height="50" fill="#D62327"/>
+    <rect x="170" y="138" width="20" height="22" fill="#FFFFFF"/>
+  </g>
+  <!-- Dividers -->
+  <rect x="20" y="166" width="320" height="3" fill="#BFBFBF"/>
+  <rect x="20" y="232" width="320" height="3" fill="#BFBFBF"/>
+  <!-- Wordmark -->
+  <text x="50%" y="206" text-anchor="middle" fill="#D62327" font-family="Inter, Arial, sans-serif" font-size="46" font-weight="900" letter-spacing="-1">TOP<tspan fill="#111111">GUARD</tspan></text>
+  <!-- Subtitle -->
+  <text x="50%" y="258" text-anchor="middle" fill="#9A9A9A" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="700" letter-spacing="2">CORRETORA DE SEGUROS</text>
+  <!-- Red ribbon -->
+  <rect x="60" y="278" width="240" height="58" fill="#D62327"/>
+  <text x="50%" y="318" text-anchor="middle" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="800" letter-spacing="3">RENOVAÇÕES</text>
+</svg>

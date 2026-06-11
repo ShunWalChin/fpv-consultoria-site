@@ -25,27 +25,31 @@ Principais secoes do site:
 - Hero com chamada para BPO Financeiro e WhatsApp.
 - Dor do cliente e posicionamento da FPV.
 - Sobre a FPV Consultoria.
-- Fundador e CEO: Francisco Paulo Gomes Valente.
+- Fundador e CEO: Francisco Valente.
 - BPO Financeiro.
 - Servicos financeiros.
 - Processos e metodologia de trabalho.
 - Beneficios e resultados esperados.
 - Clientes atendidos.
-- Depoimentos reais: DGL Engenharia, Grupo Cokinos e Imunita.
+- Depoimentos reais: DGL Sistemas, Cokinos Auditores e Imunita.
 - FAQ.
-- CTA final e rodape.
+- CTA final, formulario de pre-orcamento e rodape com CNPJ.
+- Politica de Privacidade LGPD.
 
 ## Estrutura
 
 ```text
 .
 |-- index.html
+|-- politica-privacidade.html
 |-- assets/
 |   |-- css/
 |   |   |-- styles.css
 |   |   `-- styles.min.css
 |   |-- images/
 |   |   |-- francisco-valente.jpeg
+|   |   |-- fattech-signature.png
+|   |   |-- favicon.svg
 |   |   `-- logos/
 |   `-- js/
 |       |-- main.js
@@ -82,16 +86,32 @@ O CSS minificado e gerado a partir de `assets/css/styles.css`:
 npx --yes clean-css-cli -o assets/css/styles.min.css assets/css/styles.css
 ```
 
-Os arquivos JavaScript minificados ja estao versionados em `assets/js/`.
+O JavaScript principal minificado e gerado a partir de `assets/js/main.js`:
+
+```powershell
+npx --yes terser assets/js/main.js -c -m -o assets/js/main.min.js
+```
+
+Depois de qualquer ajuste, sincronize a pasta de publicacao:
+
+```powershell
+Copy-Item index.html public_html\index.html -Force
+Copy-Item politica-privacidade.html public_html\politica-privacidade.html -Force
+Copy-Item assets\css\styles.css public_html\assets\css\styles.css -Force
+Copy-Item assets\css\styles.min.css public_html\assets\css\styles.min.css -Force
+Copy-Item assets\js\main.js public_html\assets\js\main.js -Force
+Copy-Item assets\js\main.min.js public_html\assets\js\main.min.js -Force
+```
 
 ## Validacoes Recomendadas
 
 ```powershell
-npx --yes html-validate index.html
+npx --yes html-validate index.html politica-privacidade.html public_html\index.html public_html\politica-privacidade.html
 node --check assets/js/main.js
 node --check assets/js/animations.js
 node --check assets/js/main.min.js
 node --check assets/js/animations.min.js
+npx --yes @axe-core/cli http://127.0.0.1:4173/ http://127.0.0.1:4173/politica-privacidade.html --exit
 ```
 
 Para conferencia visual mobile/desktop, use o localhost e teste principalmente:
@@ -99,15 +119,17 @@ Para conferencia visual mobile/desktop, use o localhost e teste principalmente:
 - Menu mobile.
 - Secao do fundador.
 - Secao de depoimentos.
+- Pagina de Politica de Privacidade.
 - Cards de clientes.
 - CTAs de WhatsApp.
 - FAQ accordion.
 
 ## Deploy
 
-O pacote local de deploy e gerado como `fpv_deploy.zip`, contendo apenas os arquivos necessarios para publicacao:
+O pacote local de deploy e gerado como `fpv_deploy_20260610_final.zip`, contendo o conteudo de `public_html/` pronto para hospedagem:
 
 - `index.html`
+- `politica-privacidade.html`
 - `.htaccess`
 - `robots.txt`
 - `sitemap.xml`
@@ -117,10 +139,11 @@ As instrucoes detalhadas estao em [docs/DEPLOY.md](docs/DEPLOY.md).
 
 ## Ultima Atualizacao
 
-2026-06-01:
+2026-06-10:
 
-- Adicionada dobra do fundador e CEO Francisco Paulo Gomes Valente.
-- Incluida foto local do fundador.
-- Removidos depoimentos genericos.
-- Mantidos apenas depoimentos reais enviados pelo cliente.
-- Atualizado `sitemap.xml` com a secao `#fundador`.
+- Nome do fundador/CEO padronizado como Francisco Valente.
+- Criada pagina de Politica de Privacidade LGPD.
+- Adicionado CNPJ `32.541.335.0001/03` no site.
+- Adicionada assinatura FAT Tech no rodape.
+- Corrigido logo da Cokinos e redesenhada a Prova Social em tres cards simetricos.
+- Auditoria final executada com HTML Validate, Node syntax check, axe-core, checagem de links/assets e navegador local.
